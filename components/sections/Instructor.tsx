@@ -48,9 +48,14 @@ export function Instructor() {
               ))}
             </div>
 
-            <blockquote className="mt-8 border-l-2 pl-5 u-h3 italic" style={{ borderColor: "var(--color-clay)" }}>
-              {instructor.quote}
-            </blockquote>
+            {instructor.quote && (
+              <blockquote
+                className="u-h3 mt-8 border-l-2 pl-5 italic"
+                style={{ borderColor: "var(--color-clay)" }}
+              >
+                {instructor.quote}
+              </blockquote>
+            )}
 
             <div className="mt-8">
               <TextLink href="/method" external={false}>More about the method</TextLink>

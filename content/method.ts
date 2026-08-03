@@ -51,29 +51,37 @@ export const firstSession = [
   },
 ] as const;
 
-/**
- * TODO - Courtney's real credentials.
- * Replace every [BRACKETED] value. Specific credentials convert far better
- * than vague ones: "comprehensively certified through [program], 8 years
- * teaching" beats "certified instructor" by a wide margin.
- */
-export const instructor = {
-  name: "Courtney [LAST NAME]",
+export type Instructor = {
+  name: string;
+  role: string;
+  credentials: string[];
+  bio: string[];
+  /**
+   * First-person pull quote, in Courtney's own voice.
+   * Omitted deliberately - her supplied bio is third person, and a
+   * third-person "quote" reads as marketing copy. The section renders
+   * without it until she writes one line herself.
+   */
+  quote?: string;
+  image: string;
+};
+
+export const instructor: Instructor = {
+  name: "Courtney Makuch",
   role: "Founder & Instructor",
   credentials: [
-    "[Comprehensive classical Pilates certification - program name]",
-    "[Additional certification, e.g. NASM CPT]",
-    "[X] years teaching",
+    "Comprehensively certified - Equinox Pilates Teacher Training Program",
+    "Classical lineage: Joseph Pilates to Romana Kryzanowska to Carrie Macy Samper",
+    "5+ years teaching across Austin studios",
   ],
   bio: [
-    "[1-2 sentences: where she trained, her certifications, how long she has been teaching.]",
-    "[1-2 sentences: who she works with - first-timers, people returning from injury, athletes adding Pilates to their training.]",
-    "[1 sentence: why she opened a private studio.]",
+    "Coura Pilates is a private studio dedicated to personalized 1:1 Pilates training. Courtney is a classically trained Pilates instructor and the founder of Coura Pilates.",
+    "She is comprehensively certified through the Equinox Pilates Teacher Training Program, developed by Carrie Macy Samper - a third-generation classical Pilates teacher trained under Romana Kryzanowska, whose teachings trace directly back to Joseph Pilates.",
+    "She brings over five years of teaching experience from Equinox, Forma Pilates, Lifetime South Lamar, and boutique studios throughout Austin. Her teaching blends the precision of classical Pilates with intelligent athletic training, creating sessions that build deep strength, stability, and longevity in the body.",
   ],
-  quote: "[A line from Courtney about how she teaches.]",
   image:
     "https://images.squarespace-cdn.com/content/v1/68d449a73910931af3ee6794/e2edccbc-211f-437f-9f4b-e41a27b1c9da/Tezza-6820.jpeg",
-} as const;
+};
 
 export const marqueeItems = [
   "1:1 only",

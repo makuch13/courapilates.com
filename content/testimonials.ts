@@ -16,7 +16,6 @@ export const testimonials: Testimonial[] = [
     full:
       "I originally started working with Courtney at Equinox and ended up following her to her own studio because honestly, I didn't want to work with anyone else. She's been a huge part of my fitness journey and every session feels really tailored to me, my goals, and compliments my other workouts perfectly. One thing I've appreciated a lot is how she's helped me work through a shoulder injury. She's been really thoughtful about building workouts around it in a way that challenged me while still helping me strengthen and recover it properly. She also has a great way of pushing you past your limits without making it feel forced or overwhelming. On top of that, she's just super easy to work with and somehow always finds a way to fit me into her schedule, even on short notice. I couldn't recommend her more.",
     author: "Joonas K.",
-    context: "Followed Courtney from Equinox",
   },
   {
     headline: "Stronger than a decade of weightlifting",
