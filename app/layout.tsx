@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/content/site";
 import { businessSchema, JsonLd } from "@/lib/schema";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <StickyCta />
         <JsonLd data={businessSchema()} />
+        <Analytics />
       </body>
     </html>
   );
